@@ -1,0 +1,331 @@
+.section-product {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #070707;
+}
+
+.product-container_crumbs-block {
+    margin: 44px 0px 37px 0px;
+}
+
+.product-container_crumbs {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;    
+    color: #A4A4A4;
+    cursor: default;
+}
+
+.product-container_crumbs__all:hover {
+    cursor: pointer;
+    color: #FFC700;
+}
+
+.product-container_main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+.product-container_main_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-container_main_description_header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;  
+    color: #FFFFFF;
+}
+
+.product-container_main_description_txt {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #B5B5B5;    
+}
+
+.product-container_main_description_img-block {
+    margin: 10px 0px 35px 0px;
+}
+
+.product-container_main_description_img-block__img {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.product-container_main_description_cost {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFC700;
+    margin-bottom: 42px;
+}
+
+.product-container_main_description_options_ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.product-container_main_description_options_ul_li-first {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-top: 4px;
+}
+
+.product-container_main_description_options_ul_li-second {
+    height: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+    background: #FFC700;
+    transform: skewX(-15deg);
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.product-container_main_description_options_ul_li-second_p {
+    transform: skewX(15deg);
+}
+
+.product-container_li-width-first {
+    width: 63.5px;
+    margin: 0px 35px 0px 11px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.product-container_li-width-second {
+    width: 108px;
+    margin: 0px 35px 0px 25px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.product-container_li-width-third {
+    width: 94px;
+    margin-left: 21.5px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.product-container_main_description_options_ul_li-second_p__img {
+    margin: 0px 0px 3px 6px;
+}
+
+.product-container_main_description_options_ul_li-second_p__img-second {
+    margin-left: 14px;
+}
+
+.product-container_main_description_btn-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 39px;
+}
+
+.product-container_main_description_btn-block__btn {
+    width: 200px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFC700;
+    background: #070707;
+    border: 2px solid #FFC700;
+    padding: 19px 0px;
+    margin-right: 31px;
+    cursor: pointer;
+}
+
+.product-container_main_description_btn-block__img {
+    cursor: pointer;
+}
+
+.product-container_description {
+    width: 1096px;
+    margin: 70px 0px 137px 0px;
+}
+
+.product-container_description_header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #F0F0F0;
+}
+
+.product-container_description_txt {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #A5A5A5;
+    margin-top: 35px;
+}
+
+.product-container_reviews_header-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 42px;
+}
+
+.product-container_reviews_header-block__header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center; 
+    color: #F0F0F0;
+}
+
+.product-container_reviews_header-block__btn {
+    width: 170px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: 19px;
+    color: #FFC700;
+    border: 2px solid #FFC700;
+    padding: 15px 0px;
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+.product-container_reviews_comment-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 114px;
+}
+
+.product-container_reviews_comment-block:last-child {
+    margin-bottom: 130px;
+}
+
+.product-container_reviews_comment-block_img {
+    height: 80px;
+}
+
+.product-container_reviews_comment-block_user-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+}
+
+.product-container_reviews_comment-block_user-block_name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+
+.product-container_reviews_comment-block_user-block_img-block {
+    margin: 7px 0px 32px 12px;
+}
+
+.product-container_reviews_comment-block_user-block_img-block__img {
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.product-container_reviews_comment-block_user-block_img-block__img:first-child {
+    margin-left: 0px;
+}
+
+.product-container_reviews_comment-block_user-block_comment {
+    width: 942px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #A5A5A5;
+}
+
+.product-container_recommend {
+    margin-bottom: 162px;
+}
+
+.product-container_recommend_header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #F0F0F0;
+}
+
+.product-container_recommend_goods-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 59px;
+}
+
+.product-container_recommend_goods-block_product-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.product-container_recommend_goods-block_product-block:first-child {
+    margin: 0px 8px 0px 10px;
+}
+
+.product-container_recommend_goods-block_product-block__txt {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.product-container_additional-margin {
+    margin-top: 26px;
+}
+
+.product-container_recommend_goods-block_product-block__price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F0F0F0;
+    margin-top: 5px;
+}

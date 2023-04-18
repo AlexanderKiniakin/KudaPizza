@@ -1,0 +1,54 @@
+<section class="section-home">
+
+    <div class="slider-container">
+        <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig" 
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+      <img src="{{ slide.img }}" alt="" width="100%">
+      </div>
+      </ngx-slick-carousel>
+    </div>
+
+    <div class="info-container">
+
+        <a href="https://vk.com/kudapizza" target="_blank" class="info-container__link">Группа VK</a>
+        <a href="https://api.whatsapp.com/send/?phone=79959219151&text&type=phone_number&app_absent=0"
+         target="_blank" class="info-container__link">
+         Служба поддержки
+        </a>
+
+    </div>
+
+    <div class="products-container" >
+
+        <div class="products-container_product-block {{category.class}}"
+        *ngFor='let category of categories'
+        [routerLink]='["/products"]'
+        [queryParams]="{ category: category.id }"
+        >
+            <p class="products-container_product-block__txt">{{category.name}}</p>
+        </div>
+
+    </div>
+
+    <div class="description-container">
+        <h2 class="description-container__header">Доставка пиццы в Москве</h2>
+        <p class="description-container_main-txt">«Куда Пиццу» — это доставка пиццы 
+            и роллов в районе Кузьминки, Текстильщики, Рязанский, Перово, Новогиреево 
+            и Выхино-Жулебино от 30 минут. Просто откройте наш сайт или приложение, 
+            выберите интересующие вас позиции и сделайте заказ, легче просто некуда. 
+            Мы тщательно следим за качеством ингредиентов и выбираем самые лучшие продукты. 
+            А молниеносная доставка пиццы и роллов позволяет заказу прибыть к вам максимально 
+            горячим и вкусным.
+        </p>
+        <p class="description-container_txt">
+            Скажите куда, и мы привезем вам пиццу, роллы и многое другое!
+        </p>
+    </div>
+
+</section>

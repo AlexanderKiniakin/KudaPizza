@@ -1,0 +1,49 @@
+<header class="header">
+    <div class="header-container">
+        <div class="header-container_border-first">
+            <div class="header-container_border-first_tools">
+
+                    <p class="header-container_border-first_tools_txt">
+                        Среднее время доставки*:
+                        <span class="header-container_border-first_tools_txt__span">00:24:19</span>
+                    </p>
+                
+                <div class="header-container_border-first_tools_opening-hours">
+                    <p class="header-container_border-first_tools_opening-hours__txt">Время работы: с 11:00 до 23:00</p>
+                    <p class="header-container_border-first_tools_opening-hours_authoriz">
+                        <img class="header-container_border-first_tools_opening-hours_authoriz__img" src="/assets/img/Account.png" alt="">
+                        Войти в аккаунт
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="header-container_border-second">
+            <div class="header-container_border-second_nav">
+
+                <img class="header-container_border-second_nav__logo" src="assets/img/logo.png" alt="logo" [routerLink]='["/"]'>
+    
+                <ul class="header-container_border-second_nav_ul">
+                    <li class="header-container_border-second_nav_ul_li" *ngFor='let category of categories'>
+                        <span
+                            class="header-container_border-second_nav_ul_li_link"
+                            [routerLink]='["/products"]'
+                            [queryParams]="{ category: category.id }"
+                            >{{category.name}}
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="header-container_border-second_nav_cart-block">
+                    <img class="header-container_border-second_nav_cart-block__img" src="/assets/img/cart.png" alt="">
+                    <p class="header-container_border-second_nav_cart-block_cost">
+                        <span class="header-container_border-second_nav_cart-block_cost__calc">0</span> руб.
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+</header>
