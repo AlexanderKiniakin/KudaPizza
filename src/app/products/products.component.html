@@ -9,7 +9,9 @@
         </div>
 
         <div class="products-container_goods-block">
-            <div class="products-container_goods-block_product-block" *ngFor="let product of products">
+            <div class="products-container_goods-block_product-block"
+            *ngFor="let product of products"
+            [routerLink]='["/product"]'>
 
                 <img class="products-container_goods-block_product-block__img" src={{product.image}} alt="">
 

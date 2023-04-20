@@ -1,7 +1,11 @@
 <section class="section-product">
 
-    <div class="product-container">
-        
+    <div class="product-container" 
+    *ngFor="let product of products">
+
+        <img class="products-container_goods-block_product-block__img" src={{product.image}} alt="">
+
+
     </div>
 
 </section>
