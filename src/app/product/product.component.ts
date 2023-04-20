@@ -21,11 +21,21 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     this.getRouteParams();
+    this.route.url.subscribe((url)=> { 
+      const header: any = document.querySelector('app-header');
+      const footer: any = document.querySelector('app-footer'); 
+        header.style.display = 'none';
+        footer.style.display = 'none';
+    }); 
   }
 
   ngOnDestroy() {
     this.categorySubscribe.unsubscribe();
     this.productsSubscribe.unsubscribe();
+    const header: any = document.querySelector('app-header');
+    const footer: any = document.querySelector('app-footer'); 
+    header.style.display = 'flex';
+    footer.style.display = 'flex'; 
   }
 
   getRouteParams() {

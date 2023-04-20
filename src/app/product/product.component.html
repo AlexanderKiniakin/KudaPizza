@@ -3,8 +3,11 @@
     <div class="product-container" 
     *ngFor="let product of products">
 
-        <img class="products-container_goods-block_product-block__img" src={{product.image}} alt="">
+        <img class="product-container__img" src={{product.image}} alt="">
 
+        <div class="product-container_params-block">
+            <h2></h2>
+        </div>
 
     </div>
 
