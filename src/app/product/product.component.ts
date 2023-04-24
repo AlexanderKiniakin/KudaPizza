@@ -34,8 +34,8 @@ export class ProductComponent implements OnInit {
     this.productsSubscribe.unsubscribe();
     const header: any = document.querySelector('app-header');
     const footer: any = document.querySelector('app-footer'); 
-    header.style.display = 'flex';
-    footer.style.display = 'flex'; 
+    header.style.display = 'block';
+    footer.style.display = 'block'; 
   }
 
   getRouteParams() {
@@ -66,6 +66,7 @@ export class ProductComponent implements OnInit {
       if (item.category === this.category.id) {
         acc.push(item);
       }
+      
       return acc;
     }, []);
   }

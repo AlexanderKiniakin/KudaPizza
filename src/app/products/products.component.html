@@ -11,7 +11,8 @@
         <div class="products-container_goods-block">
             <div class="products-container_goods-block_product-block"
             *ngFor="let product of products"
-            [routerLink]='["/product"]'>
+            [routerLink]='["/product"]'
+            [queryParams]="{ product: product.id }">
 
                 <img class="products-container_goods-block_product-block__img" src={{product.image}} alt="">
 
