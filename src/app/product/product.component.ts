@@ -66,7 +66,6 @@ export class ProductComponent implements OnInit {
       if (item.category === this.category.id) {
         acc.push(item);
       }
-      
       return acc;
     }, []);
   }
