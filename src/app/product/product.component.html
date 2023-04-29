@@ -4,20 +4,20 @@
 
         <div class="product-container_card-block">
 
-            <img class="product-container_card-block__img" src={{product.image}} alt="">
+            <img class="product-container_card-block__img" src={{productService.product?.image}} alt="">
 
             <div class="product-container_card-block_params-block">
 
                 <h2 class="product-container_card-block_params-block__header">
-                    {{product.name}}
+                    {{productService.product?.name}}
                 </h2>
-    
-                <p class="product-container_card-block_params-block__description" *ngIf='product?.description'>
-                    {{product?.description}}
+
+                <p class="product-container_card-block_params-block__description" *ngIf='productService.product?.description'>
+                    {{productService.product?.description}}
                 </p>
-    
-                <p class="product-container_card-block_params-block__ingredients" *ngIf='product?.ingredients'>
-                    Состав: {{product?.ingredients}}
+
+                <p class="product-container_card-block_params-block__ingredients" *ngIf='productService.product?.ingredients'>
+                    Состав: {{productService.product?.ingredients}}
                 </p>
 
             </div>
@@ -27,9 +27,9 @@
         <div class="product-container_price-block">
 
             <p class="product-container_price-block__price">
-                {{product.price}} руб.
+                {{productService.product?.price}} руб.
             </p>
-            
+
             <p class="product-container_price-block__btn">
                 Добавить
             </p>
@@ -37,7 +37,7 @@
         </div>
 
         <div class="product-container_close-block">
-            <img class="product-container_close-block__close-btn" src="/assets/img/close-btn.png" alt="">
+            <img class="product-container_close-block__close-btn" src="/assets/img/close-btn.png" alt="" (click)="closeModal()">
         </div>
 
     </div>

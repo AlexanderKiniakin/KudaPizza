@@ -33,7 +33,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [ProductComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

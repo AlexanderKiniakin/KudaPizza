@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../services/database.service';
+import { AppComponent } from './../app.component';
+import { ProductService } from "../services/product.service";
 
 @Component({
   selector: 'app-products',
@@ -17,7 +19,9 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private databaseService: DatabaseService
+    private databaseService: DatabaseService,
+    private appComponent: AppComponent,
+    private productService: ProductService
     ) {}
 
   ngOnInit() {
@@ -41,7 +45,7 @@ export class ProductsComponent implements OnInit {
       } else {
         this.getProducts();
       }
-      
+
     })
   }
 
@@ -53,12 +57,19 @@ export class ProductsComponent implements OnInit {
 
   findCategory(products: any[]) {
     this.products = products.reduce((acc, item) => {
-      
+
       if (item.category === this.category.id) {
         acc.push(item);
       }
       return acc;
     }, []);
+  }
+
+  findProduct(id: string) {
+    this.products.find((product: any) => {
+      if (product.id === id) this.productService.product = product
+    })
+    this.appComponent.modalView = true;
   }
 
 }

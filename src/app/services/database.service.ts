@@ -24,5 +24,5 @@ export class DatabaseService {
   getProduct(id: string): Observable<any> {
     return this.db.collection('products').doc(id).valueChanges({idField: 'id'});
   }
-  
+
 }

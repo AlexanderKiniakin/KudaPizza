@@ -10,9 +10,7 @@
 
         <div class="products-container_goods-block">
             <div class="products-container_goods-block_product-block"
-            *ngFor="let product of products"
-            [routerLink]='["/product"]'
-            [queryParams]="{ product: product.id }">
+            *ngFor="let product of products" (click)="findProduct(product.id)">
 
                 <img class="products-container_goods-block_product-block__img" src={{product.image}} alt="">
 
@@ -41,12 +39,12 @@
 
     <div class="description-container">
         <h2 class="description-container__header">Доставка пиццы в Москве</h2>
-        <p class="description-container_main-txt">«Куда Пиццу» — это доставка пиццы 
-            и роллов в районе Кузьминки, Текстильщики, Рязанский, Перово, Новогиреево 
-            и Выхино-Жулебино от 30 минут. Просто откройте наш сайт или приложение, 
-            выберите интересующие вас позиции и сделайте заказ, легче просто некуда. 
-            Мы тщательно следим за качеством ингредиентов и выбираем самые лучшие продукты. 
-            А молниеносная доставка пиццы и роллов позволяет заказу прибыть к вам максимально 
+        <p class="description-container_main-txt">«Куда Пиццу» — это доставка пиццы
+            и роллов в районе Кузьминки, Текстильщики, Рязанский, Перово, Новогиреево
+            и Выхино-Жулебино от 30 минут. Просто откройте наш сайт или приложение,
+            выберите интересующие вас позиции и сделайте заказ, легче просто некуда.
+            Мы тщательно следим за качеством ингредиентов и выбираем самые лучшие продукты.
+            А молниеносная доставка пиццы и роллов позволяет заказу прибыть к вам максимально
             горячим и вкусным.
         </p>
         <p class="description-container_txt">
