@@ -20,4 +20,9 @@ export class DatabaseService {
   getProducts(): Observable<any[]> {
     return this.db.collection('products').valueChanges({idField: 'id'});
   }
+
+  getProduct(id: string): Observable<any> {
+    return this.db.collection('products').doc(id).valueChanges({idField: 'id'});
+  }
+  
 }

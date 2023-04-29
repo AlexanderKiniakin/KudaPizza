@@ -9,10 +9,10 @@ import { DatabaseService } from '../services/database.service';
 })
 export class ProductComponent implements OnInit {
 
-  public category: any;
-  private categorySubscribe: any;
+  public product: any;
   private productsSubscribe: any;
-  public products: any[] = [];
+  private productSubscribe: any;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +30,6 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.categorySubscribe.unsubscribe();
     this.productsSubscribe.unsubscribe();
     const header: any = document.querySelector('app-header');
     const footer: any = document.querySelector('app-footer'); 
@@ -40,35 +39,19 @@ export class ProductComponent implements OnInit {
 
   getRouteParams() {
     return this.route.queryParams.subscribe((params: any) => {
-      if (params.category) {
-        this.categorySubscribe = this.databaseService
-      .getCategory(params.category)
-      .subscribe((category: any) => {
-        this.category = category;
-        this.getProducts();
-      });
-      } else {
-        this.getProducts();
-      }
-      
+      if (params.product) {
+        this.getProduct(params.product)
+
+      } 
     })
   }
 
-  getProducts() {
-    this.productsSubscribe = this.databaseService.getProducts().subscribe(async (products: any) => {
-      this.category?.id ? this.findCategory(products) : this.products = products;
-    })
+  getProduct(id: string) {
+    this.productSubscribe = this.databaseService.getProduct(id).subscribe((product: any) => this.product = product)
   }
 
-  findCategory(products: any[]) {
-    this.products = products.reduce((acc, item) => {
-      
-      if (item.category === this.category.id) {
-        acc.push(item);
-      }
-      return acc;
-    }, []);
+  findProduct(products: any[]) {
+    console.log(products);
   }
 
 }
-
