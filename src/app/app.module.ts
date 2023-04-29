@@ -9,8 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
-import { AuthorizComponent } from './authoriz/authoriz.component';
-import { ProfileComponent } from './profile/profile.component';
 
 import { environment } from 'src/environment/environment';
 import { AngularFireModule } from "@angular/fire/compat";
@@ -26,8 +24,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     ProductsComponent,
     ProductComponent,
     CartComponent,
-    AuthorizComponent,
-    ProfileComponent
+
   ],
   imports: [
     BrowserModule,
