@@ -4,9 +4,9 @@
 
         <h1 class="cart-container__order-header">Ваш заказ</h1>
 
-        <div class="cart-container_products-block">
+        <div class="cart-container_products-block" *ngFor="let item of items">
 
-            <div class="cart-container_products-block_product-block" *ngFor="let item of items">
+            <div class="cart-container_products-block_product-block">
             
                 <div class="cart-container_products-block_product-block_img-block">
     
