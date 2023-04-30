@@ -30,7 +30,7 @@
                 {{productService.product?.price}} руб.
             </p>
 
-            <p class="product-container_price-block__btn">
+            <p class="product-container_price-block__btn" (click)="addToCartProduct(productService.product)">
                 Добавить
             </p>
 

@@ -9,10 +9,14 @@ import { ProductService } from "../services/product.service";
 })
 export class ProductComponent {
 
+
   constructor(
     public productService: ProductService,
     private appComponent: AppComponent
     ) {}
+
+    addToCartProduct(product: any) {
+    }
 
   closeModal() {
     this.appComponent.modalView = false;
