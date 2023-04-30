@@ -8,9 +8,16 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent {
 
+  public cartArray: any;
+
   constructor(
     public cartService: CartService,
   ){}
+
+  findCart() {
+    this.cartArray = this.cartService.items;
+    console.log(this.cartArray)
+  }
   
 
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppComponent } from "../app.component";
 import { ProductService } from "../services/product.service";
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -12,10 +13,12 @@ export class ProductComponent {
 
   constructor(
     public productService: ProductService,
+    public cartService: CartService,
     private appComponent: AppComponent
     ) {}
 
-    addToCartProduct(product: any) {
+    pushToCart(pushProduct: object) {
+      this.cartService.addToCart(pushProduct);
     }
 
   closeModal() {
