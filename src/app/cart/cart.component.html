@@ -6,16 +6,20 @@
 
         <div class="cart-container_products-block">
 
-            <div class="cart-container_products-block_product-block">
+            <div class="cart-container_products-block_product-block" *ngFor="let item of items">
             
                 <div class="cart-container_products-block_product-block_img-block">
     
-                    <img class="cart-container_products-block_product-block_img-block__img" src="" alt="">
+                    <img class="cart-container_products-block_product-block_img-block__img" src="{{ item.image }}" alt="">
     
                     <div class="cart-container_products-block_product-block_img-block_name-block">
     
-                        <p class="cart-container_products-block_product-block_img-block_name-block__name">Пепперони по-деревенски</p>
-                        <p class="cart-container_products-block_product-block_img-block_name-block__description">Традиционное тесто, 23 см</p>
+                        <p class="cart-container_products-block_product-block_img-block_name-block__name">
+                            {{ item.name }}
+                        </p>
+                        <p class="cart-container_products-block_product-block_img-block_name-block__description">
+                            {{ item?.description }}
+                        </p>
     
                     </div>
     
@@ -29,7 +33,7 @@
                         <p class="cart-container_products-block_product-block_item-block_btn-block__btn-plus">+</p>
                     </div>
                     
-                    <p class="cart-container_products-block_product-block_item-block__price">35 руб.</p>
+                    <p class="cart-container_products-block_product-block_item-block__price">{{ item.price }} руб.</p>
     
                 </div>
     
