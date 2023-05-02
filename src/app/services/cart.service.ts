@@ -11,6 +11,7 @@ export class CartService {
   constructor() { }
 
   addToCart(product: any) {
+    product.count = 5;
     this.items.push(product)
   }
 
