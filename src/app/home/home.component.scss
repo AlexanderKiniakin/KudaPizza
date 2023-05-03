@@ -31,7 +31,7 @@
     font-weight: 700;
 }
 
-.products-container {
+.allproducts-container {
     max-width: 1290px;
     width: 100%;
     display: flex;
@@ -41,7 +41,7 @@
     padding: 0px 20px;
 }
 
-.products-container_product-block {
+.allproducts-container_product-block {
     position: relative;
     width: 234px;
     height: 200px;
@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 
-.products-container_product-block:hover {
+.allproducts-container_product-block:hover {
     transition: all .2s ease-in-out;
     transform: translateY(7px);
 }
@@ -82,7 +82,7 @@
     background: url("/assets/img/dessert.png") 0% 0% / auto 150px no-repeat rgb(238, 232, 46);
 }
 
-.products-container_product-block__txt {
+.allproducts-container_product-block__txt {
     position: absolute;
     width: 100%;
     display: block;

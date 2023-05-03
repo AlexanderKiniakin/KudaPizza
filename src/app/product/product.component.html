@@ -3,37 +3,27 @@
     <div class="product-container">
 
         <div class="product-container_card-block">
-
             <img class="product-container_card-block__img" src={{productService.product?.image}} alt="">
-
             <div class="product-container_card-block_params-block">
-
                 <h2 class="product-container_card-block_params-block__header">
                     {{productService.product?.name}}
                 </h2>
-
                 <p class="product-container_card-block_params-block__description" *ngIf='productService.product?.description'>
                     {{productService.product?.description}}
                 </p>
-
                 <p class="product-container_card-block_params-block__ingredients" *ngIf='productService.product?.ingredients'>
                     Состав: {{productService.product?.ingredients}}
                 </p>
-
             </div>
-
         </div>
 
         <div class="product-container_price-block">
-
             <p class="product-container_price-block__price">
                 {{productService.product?.price}} руб.
             </p>
-
             <p class="product-container_price-block__btn" (click)="pushToCart(productService.product)">
                 Добавить
             </p>
-
         </div>
 
         <div class="product-container_close-block">

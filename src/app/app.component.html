@@ -1,9 +1,11 @@
 <div class="popover__content" *ngIf="popoverView">
   <p class="popover__message">"{{popoverTitle}}" <span>- добавлен в корзину</span></p>
 </div>
+
 <div class="product-modal" *ngIf="modalView">
     <app-product></app-product>
 </div>
+
 <app-header></app-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

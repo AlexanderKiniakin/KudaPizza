@@ -5,32 +5,23 @@
     </div>
 
     <div class="cart-container" *ngIf="cartService.basket.length">
-
         <h1 class="cart-container__order-header">Ваш заказ</h1>
-
         <div class="cart-container_products-block" *ngFor="let item of cartService.basket; let ind=index">
 
             <div class="cart-container_products-block_product-block">
-
                 <div class="cart-container_products-block_product-block_img-block">
-
                     <img class="cart-container_products-block_product-block_img-block__img" src="{{ item.image }}" alt="">
-
                     <div class="cart-container_products-block_product-block_img-block_name-block">
-
                         <p class="cart-container_products-block_product-block_img-block_name-block__name">
                             {{ item.name }}
                         </p>
                         <p class="cart-container_products-block_product-block_img-block_name-block__description">
                             {{ item?.description }}
                         </p>
-
                     </div>
-
                 </div>
 
                 <div class="cart-container_products-block_product-block_item-block">
-
                     <div class="cart-container_products-block_product-block_item-block_btn-block">
                         <p class="cart-container_products-block_product-block_item-block_btn-block__btn-minus"
                         (click)="cartService.minusCountCart(ind, item)">
@@ -44,35 +35,28 @@
                     </div>
 
                     <p class="cart-container_products-block_product-block_item-block__price">{{ item.total_price | number:'1.1-2'}} руб.</p>
-
                 </div>
-
             </div>
-
         </div>
 
         <h3 class="cart-container__clien-info-header">О вас</h3>
 
         <div class="cart-container_client-info">
-
                 <label class="cart-container_client-info_label">
                     Имя*
                     <input class="cart-container_client-info_label__input"
                     placeholder="Алексей" type="username">
                 </label>
-
                 <label class="cart-container_client-info_label">
                     Номер телефона*
                     <input class="cart-container_client-info_label__input"
                     placeholder="+375" type="tel">
                 </label>
-
                 <label class="cart-container_client-info_label">
                     Почта*
                     <input class="cart-container_client-info_label__input"
                     placeholder="mail@gmail.com" type="email">
                 </label>
-
         </div>
 
         <div class="cart-container__line"></div>
@@ -80,53 +64,43 @@
         <h3 class="cart-container_delivery-header">Доставка</h3>
 
         <div class="cart-container_delivery-block">
-
             <label class="cart-container_delivery-block_label">
                 Улица*
                 <input class="cart-container_delivery-block_label__input"
                 placeholder="пр.Независимости" type="text">
             </label>
-
             <div class="cart-container_delivery-block_house-block">
-
                 <label class="cart-container_delivery-block_house-block_label">
                     Дом*
                     <input class="cart-container_delivery-block_house-block_label__input"
                     placeholder="180" type="text">
                 </label>
-
                 <label class="cart-container_delivery-block_house-block_label">
                     Подъезд*
                     <input class="cart-container_delivery-block_house-block_label__input"
                     placeholder="6" type="text">
                 </label>
-
                 <label class="cart-container_delivery-block_house-block_label">
                     Этаж*
                     <input class="cart-container_delivery-block_house-block_label__input"
                     placeholder="8" type="text">
                 </label>
-
                 <label class="cart-container_delivery-block_house-block_label">
                     Квартира*
                     <input class="cart-container_delivery-block_house-block_label__input"
                     placeholder="174" type="text">
                 </label>
-
                 <label class="cart-container_delivery-block_house-block_label">
                     Домофон
                     <input class="cart-container_delivery-block_house-block_label__input"
                     placeholder="0000" type="text">
                 </label>
-
             </div>
 
             <h5 class="cart-container_delivery-block__delivery-time">Когда выполнить заказ?</h5>
 
             <div class="cart-container_delivery-block_time">
-
                 <div class="cart-container_delivery-block_time_input-block">
-
                     <input class="cart-container_delivery-block_time_input-block__input"
                     type="radio" name="time-delivery" id="soon">
 
@@ -134,23 +108,18 @@
                     <span class="cart-container_delivery-block_time_input-block__span-input"></span>
                     Как можно скорее
                 </label>
-
                 </div>
 
                 <div class="cart-container_delivery-block_time_input-block">
-
                     <input class="cart-container_delivery-block_time_input-block__input"
                     type="radio" name="time-delivery" id="by-time">
-
 
                    <label class="cart-container_delivery-block_time_input-block__label" for="by-time">
                     <span class="cart-container_delivery-block_time_input-block__span-input"></span>
                     По времени
                 </label>
                 </div>
-
             </div>
-
         </div>
 
         <div class="cart-container__line"></div>
@@ -158,28 +127,23 @@
         <h3 class="cart-container_payment-header">Оплата</h3>
 
         <div class="cart-container_payment-block">
-
             <div class="cart-container_payment-block_input-block">
-
                 <input class="cart-container_payment-block_input-block__input"
                 type="radio" name="payment" id="cash">
 
                 <label class="cart-container_payment-block_input-block__label" for="cash">
                 <span class="cart-container_payment-block_input-block__span-input"></span>
                 Наличными</label>
-
             </div>
 
             <div class="cart-container_payment-block_input-block">
                 <input class="cart-container_payment-block_input-block__input"
                 type="radio" name="payment" id="non-cash">
 
-
                 <label class="cart-container_payment-block_input-block__label" for="non-cash">
                 <span class="cart-container_payment-block_input-block__span-input"></span>
                 Картой</label>
             </div>
-
         </div>
 
         <div class="cart-container__line"></div>
@@ -187,22 +151,17 @@
         <h2 class="cart-container_comment-header">Комментарий</h2>
 
         <div class="cart-container_comment-block">
-
             <textarea class="cart-container_comment-block__input"
             placeholder="Есть уточнения?" type="text"></textarea>
-
         </div>
 
         <div class="cart-container__line"></div>
 
         <div class="cart-container_checkout-block">
-
             <p class="cart-container_checkout-block__total-price" *ngIf="cartService.grandTotal">Итого: {{ cartService.grandTotal | number:'1.1-2' }} руб.</p>
             <p class="cart-container_checkout-block__total-price" *ngIf="!cartService.grandTotal">Итого: 0 руб.</p>
             <p class="cart-container_checkout-block__btn">Оформить заказ</p>
-
         </div>
-
     </div>
 
 </section>
