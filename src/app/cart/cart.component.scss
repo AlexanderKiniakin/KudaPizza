@@ -355,6 +355,14 @@
 }
 
 .not-basket {
-  margin-top: 100px;
-  margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cart-container__cart-empty {
+    width: 150px;
 }
