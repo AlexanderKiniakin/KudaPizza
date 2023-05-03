@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public modalView: boolean = false;
+  public popoverTitle: string = '';
+  public popoverView: boolean = false;
 }

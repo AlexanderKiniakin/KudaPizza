@@ -9,3 +9,27 @@
   align-items: center;
   justify-content: center;
 }
+.popover__content {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  right: 50px;
+  transform: translate(0, 10px);
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  width: auto;
+  z-index: 101;
+  transition: all 300ms ease-in-out;
+  border-radius: 8px;
+}
+.popover__message {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  span {
+    font-style: normal;
+    font-weight: normal;
+  }
+}

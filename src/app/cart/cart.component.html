@@ -1,48 +1,52 @@
 <section class="section-cart">
 
-    <div class="cart-container">
+    <div class="not-basket" *ngIf="!cartService.basket.length">
+      <h1 class="cart-container__order-header">Ваша корзина пуста</h1>
+    </div>
+
+    <div class="cart-container" *ngIf="cartService.basket.length">
 
         <h1 class="cart-container__order-header">Ваш заказ</h1>
 
-        <div class="cart-container_products-block" *ngFor="let item of items; let ind=index">
+        <div class="cart-container_products-block" *ngFor="let item of cartService.basket; let ind=index">
 
             <div class="cart-container_products-block_product-block">
-            
+
                 <div class="cart-container_products-block_product-block_img-block">
-    
+
                     <img class="cart-container_products-block_product-block_img-block__img" src="{{ item.image }}" alt="">
-    
+
                     <div class="cart-container_products-block_product-block_img-block_name-block">
-    
+
                         <p class="cart-container_products-block_product-block_img-block_name-block__name">
                             {{ item.name }}
                         </p>
                         <p class="cart-container_products-block_product-block_img-block_name-block__description">
                             {{ item?.description }}
                         </p>
-    
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="cart-container_products-block_product-block_item-block">
-    
+
                     <div class="cart-container_products-block_product-block_item-block_btn-block">
                         <p class="cart-container_products-block_product-block_item-block_btn-block__btn-minus"
-                        (click)="minusCountCart(ind, item)">
+                        (click)="cartService.minusCountCart(ind, item)">
                         -</p>
                         <p class="cart-container_products-block_product-block_item-block_btn-block__quantity">
                             {{ item.count }}
                         </p>
                         <p class="cart-container_products-block_product-block_item-block_btn-block__btn-plus"
-                        (click)="plusCountCart(ind, item)">
+                        (click)="cartService.plusCountCart(ind, item)">
                         +</p>
                     </div>
-                    
-                    <p class="cart-container_products-block_product-block_item-block__price">{{ item.price }} руб.</p>
-    
+
+                    <p class="cart-container_products-block_product-block_item-block__price">{{ item.total_price | number:'1.1-2'}} руб.</p>
+
                 </div>
-    
+
             </div>
 
         </div>
@@ -125,26 +129,26 @@
 
                     <input class="cart-container_delivery-block_time_input-block__input"
                     type="radio" name="time-delivery" id="soon">
-   
+
                    <label class="cart-container_delivery-block_time_input-block__label" for="soon">
                     <span class="cart-container_delivery-block_time_input-block__span-input"></span>
                     Как можно скорее
                 </label>
 
                 </div>
-                
+
                 <div class="cart-container_delivery-block_time_input-block">
 
                     <input class="cart-container_delivery-block_time_input-block__input"
                     type="radio" name="time-delivery" id="by-time">
 
-   
+
                    <label class="cart-container_delivery-block_time_input-block__label" for="by-time">
                     <span class="cart-container_delivery-block_time_input-block__span-input"></span>
                     По времени
                 </label>
                 </div>
-                
+
             </div>
 
         </div>
@@ -159,23 +163,23 @@
 
                 <input class="cart-container_payment-block_input-block__input"
                 type="radio" name="payment" id="cash">
-   
+
                 <label class="cart-container_payment-block_input-block__label" for="cash">
                 <span class="cart-container_payment-block_input-block__span-input"></span>
                 Наличными</label>
 
             </div>
-                
+
             <div class="cart-container_payment-block_input-block">
                 <input class="cart-container_payment-block_input-block__input"
                 type="radio" name="payment" id="non-cash">
 
-   
+
                 <label class="cart-container_payment-block_input-block__label" for="non-cash">
                 <span class="cart-container_payment-block_input-block__span-input"></span>
                 Картой</label>
             </div>
-                
+
         </div>
 
         <div class="cart-container__line"></div>
@@ -193,8 +197,8 @@
 
         <div class="cart-container_checkout-block">
 
-            <p class="cart-container_checkout-block__total-price">Итого: {{ grandTotal }} руб.</p>
-
+            <p class="cart-container_checkout-block__total-price" *ngIf="cartService.grandTotal">Итого: {{ cartService.grandTotal | number:'1.1-2' }} руб.</p>
+            <p class="cart-container_checkout-block__total-price" *ngIf="!cartService.grandTotal">Итого: 0 руб.</p>
             <p class="cart-container_checkout-block__btn">Оформить заказ</p>
 
         </div>

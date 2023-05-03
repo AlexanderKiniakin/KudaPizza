@@ -44,6 +44,7 @@
 .products-container_goods-block_product-block {
     width: 290px;
     cursor: pointer;
+    transition: all 300ms ease-in-out;
 }
 
 .products-container_goods-block_product-block:hover {

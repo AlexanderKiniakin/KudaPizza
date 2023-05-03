@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../services/database.service';
+import {CartService} from "../services/cart.service";
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,10 @@ export class HeaderComponent implements OnInit {
   public categories: any[] = [];
   private categorySubscribe: any;
 
-  constructor(private databaseService:DatabaseService) {}
+  constructor(
+    private databaseService:DatabaseService,
+    public cartService: CartService
+  ) {}
 
   ngOnInit() {
     this.getAllCategories();

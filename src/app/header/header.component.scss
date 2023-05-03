@@ -115,6 +115,7 @@
     background: #FF7010;
     border-radius: 4px;
     cursor: pointer;
+    position: relative;
 }
 
 .header-container_border-second_nav_cart-block__img {
@@ -128,4 +129,20 @@
     line-height: 22px;
     color: #FFFFFF;
     margin-top: 2px;
+}
+
+.count-basket {
+  top: 2px;
+  background: #fff;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  left: 32px;
+  color: #FF7010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 10px;
 }

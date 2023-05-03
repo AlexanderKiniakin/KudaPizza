@@ -17,9 +17,19 @@ export class ProductComponent {
     private appComponent: AppComponent
     ) {}
 
-    pushToCart(pushProduct: object) {
-      this.cartService.addToCart(pushProduct);
-    }
+  pushToCart(pushProduct: any) {
+    this.cartService.addToCart(pushProduct);
+    this.appComponent.popoverTitle = pushProduct.name;
+    this.appComponent.popoverView = true;
+    setTimeout(() => {
+      const popover: any = document.querySelector('.popover__content');
+      popover.style.opacity = 0;
+      popover.style.visibility = 'hidden';
+    }, 2000);
+    setTimeout(() => {
+      this.appComponent.popoverView = false;
+    }, 2300);
+  }
 
   closeModal() {
     this.appComponent.modalView = false;
