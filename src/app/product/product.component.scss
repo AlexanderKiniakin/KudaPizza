@@ -74,6 +74,7 @@
     height: 48px;
     margin-left: auto;
     background: #ef2b51;
+    border: 1px solid #ef2b51;
     border-radius: 6px;
     font-style: normal;
     font-weight: 400;
@@ -81,6 +82,12 @@
     line-height: 22px;
     color: #fff;
     cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.product-container_price-block__btn:hover {
+    color: #ef2b51;
+    background: #fff;
 }
 
 .product-container_close-block {

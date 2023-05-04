@@ -61,7 +61,7 @@ export class CartService {
     this.calcGrandTotal()
   }
 
-  plusCountCart(ind: any, item: any) {
+  plusCountCart(item: any) {
     this.basket.reduce((acc, product) => {
       if (product.id === item.id) {
         product.count++;
