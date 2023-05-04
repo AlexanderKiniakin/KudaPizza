@@ -23,15 +23,12 @@
     </div>
 
     <div class="allproducts-container" >
-
         <div class="allproducts-container_product-block {{category.class}}"
         *ngFor='let category of categories'
         [routerLink]='["/products"]'
-        [queryParams]="{ category: category.id }"
-        >
+        [queryParams]="{ category: category.id }">
             <p class="allproducts-container_product-block__txt">{{category.name}}</p>
         </div>
-
     </div>
 
     <div class="description-container">
@@ -48,5 +45,4 @@
             Скажите куда, и мы привезем вам пиццу, роллы и многое другое!
         </p>
     </div>
-
 </section>
