@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="cart-container_delivery-block_time_input-block">
-                    <input class="cart-container_delivery-block_time_input-block__input"
+                    <input class="cart-container_delivery-block_time_input-block__input by_time"
                     type="radio" name="time-delivery" id="by-time">
 
                    <label class="cart-container_delivery-block_time_input-block__label" for="by-time">
@@ -121,9 +121,20 @@
                 </label>
                 </div>
 
-                <div name="cart-container_delivery-block_time_date">
-                    <span (click)="sortTimeCall('today')">Сегодня</span>
-                    <span (click)="sortTimeCall('tomorrow')">Завтра</span>
+
+                <div class="cart-container_delivery-block_time_delivery-date" (click)="sortDateCall()">
+                    <p class="cart-container_delivery-block_time_delivery-date_txt">
+                        {{sortDate}}
+                        <img class="cart-container_delivery-block_time_delivery-date_txt__img" 
+                        src="/assets/img/Calendar.png" alt="">
+                    </p>
+
+                    <div class="cart-container_delivery-block_time_delivery-date_choose" *ngIf="sortDateList">
+                        <p class="cart-container_delivery-block_time_delivery-date_choose_txt"
+                         (click)="sortDateCall('Сегодня')">Сегодня</p>
+                        <p class="cart-container_delivery-block_time_delivery-date_choose_txt"
+                         (click)="sortDateCall('Завтра')">Завтра</p>
+                    </div>
                 </div>
 
                 <div class="cart-container_delivery-block_time_delivery-time" (click)="sortTimeCall()">
@@ -132,38 +143,61 @@
                         <img class="cart-container_delivery-block_time_delivery-time_txt__img" 
                         src="/assets/img/Arrow-down.png" alt="">
                     </p>
+                    <div class="cart-container_delivery-block_time_delivery-time_choose" *ngIf="sortTimeList">
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('11:00-11:30')">11:00-11:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('11:30-12:00')">11:30-12:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('12:00-12:30')">12:00-12:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('12:30-13:00')">12:30-13:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('13:00-13:30')">13:00-13:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('13:30-14:00')">13:30-14:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('14:00-14:30')">14:00-14:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('14:30-15:00')">14:30-15:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('15:00-15:30')">15:00-15:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('15:30-16:00')">15:30-16:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('16:00-16:30')">16:00-16:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('16:30-17:00')">16:30-17:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('17:00-17:30')">17:00-17:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('17:30-18:00')">17:30-18:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('18:00-18:30')">18:00-18:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('18:30-19:00')">18:30-19:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('19:00-19:30')">19:00-19:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('19:30-20:00')">19:30-20:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('20:00-20:30')">20:00-20:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('20:30-21:00')">20:30-21:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('21:00-21:30')">21:00-21:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('21:30-22:00')">21:30-22:00</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('22:00-22:30')">22:00-22:30</p>
+                        <p class="cart-container_delivery-block_time_delivery-time_choose_txt"
+                         (click)="sortTimeCall('22:30-23:00')">22:30-23:00</p>
+                    </div>
                 </div>
-                <div name="cart-container_delivery-block_time_delivery-time_choose" *ngIf="sortTimeList">
-                    <p (click)="sortTimeCall('11:00-11:30')">11:00-11:30</p>
-                    <p (click)="sortTimeCall('11:30-12:00')">11:30-12:00</p>
-                    <p (click)="sortTimeCall('12:00-12:30')">12:00-12:30</p>
-                    <p (click)="sortTimeCall('12:30-13:00')">12:30-13:00</p>
-                    <p (click)="sortTimeCall('13:00-13:30')">13:00-13:30</p>
-                    <p (click)="sortTimeCall('13:30-14:00')">13:30-14:00</p>
-                    <p (click)="sortTimeCall('14:00-14:30')">14:00-14:30</p>
-                    <p (click)="sortTimeCall('14:30-15:00')">14:30-15:00</p>
-                    <p (click)="sortTimeCall('15:00-15:30')">15:00-15:30</p>
-                    <p (click)="sortTimeCall('15:30-16:00')">15:30-16:00</p>
-                    <p (click)="sortTimeCall('16:00-16:30')">16:00-16:30</p>
-                    <p (click)="sortTimeCall('16:30-17:00')">16:30-17:00</p>
-                    <p (click)="sortTimeCall('17:00-17:30')">17:00-17:30</p>
-                    <p (click)="sortTimeCall('17:30-18:00')">17:30-18:00</p>
-                    <p (click)="sortTimeCall('18:00-18:30')">18:00-18:30</p>
-                    <p (click)="sortTimeCall('18:30-19:00')">18:30-19:00</p>
-                    <p (click)="sortTimeCall('19:00-19:30')">19:00-19:30</p>
-                    <p (click)="sortTimeCall('19:30-20:00')">19:30-20:00</p>
-                    <p (click)="sortTimeCall('20:00-20:30')">20:00-20:30</p>
-                    <p (click)="sortTimeCall('20:30-21:00')">20:30-21:00</p>
-                    <p (click)="sortTimeCall('21:00-21:30')">21:00-21:30</p>
-                    <p (click)="sortTimeCall('21:30-22:00')">21:30-22:00</p>
-                    <p (click)="sortTimeCall('22:00-22:30')">22:00-22:30</p>
-                    <p (click)="sortTimeCall('22:30-23:00')">22:30-23:00</p>
-                </div>
+                
                 
             </div>
         </div>
-
-        <div class="cart-container__line"></div>
 
         <h3 class="cart-container_payment-header">Оплата</h3>
 
@@ -186,8 +220,6 @@
                 Картой</label>
             </div>
         </div>
-
-        <div class="cart-container__line"></div>
 
         <h2 class="cart-container_comment-header">Комментарий</h2>
 

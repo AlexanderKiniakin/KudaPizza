@@ -10,6 +10,8 @@ export class CartComponent {
 
   public sortTime: string = "Время";
   public sortTimeList: boolean = false;
+  public sortDate: string = "Дата";
+  public sortDateList: boolean = false;
 
   constructor(
     public cartService: CartService,
@@ -18,8 +20,17 @@ export class CartComponent {
   sortTimeCall(time?: string): void {
     if (time) {
       this.sortTime = time;
+      this.sortTimeList = !this.sortTimeList;
     }
     this.sortTimeList = !this.sortTimeList;
+  }
+
+  sortDateCall(date?: string): void {
+    if (date) {
+      this.sortDate = date;
+      this.sortDateList = !this.sortDateList;
+    }
+    this.sortDateList = !this.sortDateList;
   }
 
 }

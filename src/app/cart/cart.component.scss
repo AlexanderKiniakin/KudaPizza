@@ -367,28 +367,70 @@
     width: 150px;
 }
 
-.cart-container_delivery-block_time_delivery-time {
+.cart-container_delivery-block_time_delivery-time,
+.cart-container_delivery-block_time_delivery-date {
     display: block;
     width: 160px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
     color: #a5a5a5;
     border: 1px solid #f0f0f0;
     border-radius: 6px;
+    margin: 28px 0px 0px 16px;
     padding: 15px 16px;
     background: #fff;
     height: 48px;
     margin-bottom: 30px;
+    position: relative;
     cursor: pointer;
 }
 
-.cart-container_delivery-block_time_delivery-time_txt__img {
-    right: 0px;
+.cart-container_delivery-block_time_delivery-time_txt,
+.cart-container_delivery-block_time_delivery-date_txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-container_delivery-block_time_delivery-time_txt__img,
+.cart-container_delivery-block_time_delivery-date_txt__img {
+    margin-top: 3px;
+    height: 16px;
 }
 
 .cart-container_delivery-block_time_delivery-time_choose {
     display: block;
-    margin-left: 30px;
+    width: 160px;
     max-height: 200px;
     overflow-y: scroll;
     border: 1px solid #f0f0f0;
+    border-radius: 6px;
     background: #fff;
+    position: absolute;
+    top: 48px;
+    right: -1px;
+}
+
+.cart-container_delivery-block_time_delivery-date_choose {
+    display: block;
+    width: 160px;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    background: #fff;
+    position: absolute;
+    top: 48px;
+    right: -1px;
+}
+
+.cart-container_delivery-block_time_delivery-time_choose_txt,
+.cart-container_delivery-block_time_delivery-date_choose_txt {
+    padding: 15px 16px;
+    border: 1px solid transparent;
+}
+
+.cart-container_delivery-block_time_delivery-time_choose_txt:hover,
+.cart-container_delivery-block_time_delivery-date_choose_txt:hover {
+    border: 1px solid #f0f0f0;
+    background: rgba(239, 43, 81, 0.1);
 }
