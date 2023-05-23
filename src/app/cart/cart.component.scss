@@ -366,3 +366,29 @@
 .cart-container__cart-empty {
     width: 150px;
 }
+
+.cart-container_delivery-block_time_delivery-time {
+    display: block;
+    width: 160px;
+    color: #a5a5a5;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    padding: 15px 16px;
+    background: #fff;
+    height: 48px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.cart-container_delivery-block_time_delivery-time_txt__img {
+    right: 0px;
+}
+
+.cart-container_delivery-block_time_delivery-time_choose {
+    display: block;
+    margin-left: 30px;
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #f0f0f0;
+    background: #fff;
+}

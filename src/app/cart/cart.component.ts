@@ -8,8 +8,18 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent {
 
+  public sortTime: string = "Время";
+  public sortTimeList: boolean = false;
+
   constructor(
     public cartService: CartService,
   ){}
+
+  sortTimeCall(time?: string): void {
+    if (time) {
+      this.sortTime = time;
+    }
+    this.sortTimeList = !this.sortTimeList;
+  }
 
 }
