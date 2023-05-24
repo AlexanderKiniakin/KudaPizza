@@ -101,7 +101,7 @@
             <h5 class="cart-container_delivery-block__delivery-time">Когда выполнить заказ?</h5>
 
             <div class="cart-container_delivery-block_time">
-                <div class="cart-container_delivery-block_time_input-block">
+                <div class="cart-container_delivery-block_time_input-block" (click)="deliveryTime(false)">
                     <input class="cart-container_delivery-block_time_input-block__input"
                     type="radio" name="time-delivery" id="soon">
 
@@ -111,7 +111,7 @@
                 </label>
                 </div>
 
-                <div class="cart-container_delivery-block_time_input-block">
+                <div class="cart-container_delivery-block_time_input-block" (click)="deliveryTime(true)">
                     <input class="cart-container_delivery-block_time_input-block__input by_time"
                     type="radio" name="time-delivery" id="by-time">
 
@@ -122,7 +122,7 @@
                 </div>
 
 
-                <div class="cart-container_delivery-block_time_delivery-date" (click)="sortDateCall()">
+                <div class="cart-container_delivery-block_time_delivery-date" (click)="sortDateCall()" *ngIf="delivery">
                     <p class="cart-container_delivery-block_time_delivery-date_txt">
                         {{sortDate}}
                         <img class="cart-container_delivery-block_time_delivery-date_txt__img" 
@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-                <div class="cart-container_delivery-block_time_delivery-time" (click)="sortTimeCall()">
+                <div class="cart-container_delivery-block_time_delivery-time" (click)="sortTimeCall()" *ngIf="delivery">
                     <p class="cart-container_delivery-block_time_delivery-time_txt">
                         {{sortTime}}
                         <img class="cart-container_delivery-block_time_delivery-time_txt__img" 

@@ -37,7 +37,6 @@ export class CartService {
       }, []);
     }
     this.calcGrandTotal();
-    console.log(this.basket)
   }
 
   getItems() {

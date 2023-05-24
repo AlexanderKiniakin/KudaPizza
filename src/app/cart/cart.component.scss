@@ -220,7 +220,14 @@
     margin: 16px 0px 12px 0px;
 }
 
-.cart-container_delivery-block_time,
+.cart-container_delivery-block_time {
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .cart-container_payment-block {
     display: flex;
     flex-direction: row;
@@ -378,11 +385,10 @@
     color: #a5a5a5;
     border: 1px solid #f0f0f0;
     border-radius: 6px;
-    margin: 28px 0px 0px 16px;
+    margin-left: 16px;
     padding: 15px 16px;
     background: #fff;
     height: 48px;
-    margin-bottom: 30px;
     position: relative;
     cursor: pointer;
 }

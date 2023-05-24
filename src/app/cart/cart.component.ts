@@ -12,6 +12,7 @@ export class CartComponent {
   public sortTimeList: boolean = false;
   public sortDate: string = "Дата";
   public sortDateList: boolean = false;
+  public delivery: boolean = false;
 
   constructor(
     public cartService: CartService,
@@ -23,6 +24,7 @@ export class CartComponent {
       this.sortTimeList = !this.sortTimeList;
     }
     this.sortTimeList = !this.sortTimeList;
+    this.sortDateList = false;
   }
 
   sortDateCall(date?: string): void {
@@ -31,6 +33,16 @@ export class CartComponent {
       this.sortDateList = !this.sortDateList;
     }
     this.sortDateList = !this.sortDateList;
+    this.sortTimeList = false;
+
+  }
+
+  deliveryTime(when: boolean): void {
+    when === true ? this.delivery = when : this.delivery = false;
+    this.sortTimeList = false;
+    this.sortDateList = false;
+    this.sortDate = "Дата";
+    this.sortTime = "Время";
   }
 
 }
