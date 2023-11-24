@@ -1,4 +1,5 @@
 <div class="product-modal" *ngIf="modalView">
+    <div class="product-modal_background" (click)="closeModal()"></div>
     <div class="popover__content" *ngIf="popoverView">
       <p class="popover__message">"{{popoverTitle}}" <span>- добавлен в корзину</span></p>
     </div>

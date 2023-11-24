@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppComponent } from "../app.component";
 import { ProductService } from "../services/product.service";
 import { CartService } from '../services/cart.service';
@@ -8,14 +8,23 @@ import { CartService } from '../services/cart.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit{
 
+  private bodyDom: any = document.querySelector("body")
 
   constructor(
     public productService: ProductService,
     public cartService: CartService,
     private appComponent: AppComponent
     ) {}
+
+  ngOnInit() {
+    this.bodyDom.style.overflow = "hidden";
+  }
+
+  ngOnDestroy() {
+    this.bodyDom.style.overflow = "visible";
+  }
 
   pushToCart(pushProduct: any) {
     this.cartService.addToCart(pushProduct);

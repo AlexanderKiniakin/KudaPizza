@@ -11,4 +11,8 @@ export class AppComponent {
   public modalView: boolean = false;
   public popoverTitle: string = '';
   public popoverView: boolean = false;
+
+  closeModal() {
+    this.modalView = false;
+  }
 }

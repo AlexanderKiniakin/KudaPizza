@@ -1,14 +1,28 @@
 .product-modal {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   z-index: 100;
-  backdrop-filter: blur(13px);
-  background: rgba(25,25,25,.4);
+  
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+app-product {
+  z-index: 120;
+}
+
+.product-modal_background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(13px);
+  background: rgba(25,25,25,.4);
+}
+
 .popover__content {
   opacity: 1;
   visibility: visible;
